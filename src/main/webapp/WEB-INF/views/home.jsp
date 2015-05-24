@@ -3,16 +3,22 @@
 <%@ page session="false"%>
 <html>
 <head>
-<title>Home</title>
+<title>Konf6 - Strona glowna</title>
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <h1>Witaj na stronie Konf6</h1>
 
     <p>
-      Hello <b><c:out value="${pageContext.request.remoteUser}"/></b><br>
-      Roles: <b><sec:authentication property="principal.authorities" /></b>
+      Zalogowany jako: <b><c:out value="${pageContext.request.remoteUser}"/></b><br />
+      Uprawnienia: <b><sec:authentication property="principal.authorities" /></b>
     </p>
  
-    <P>The time on the server is ${serverTime}.</P>
+    <p>The time on the server is ${serverTime}.</p>
+    
+    <p>
+      <ul>
+        <li><a href="./articles">Artykuly</a></li>
+      </ul>
+    </p>
 </body>
 </html>

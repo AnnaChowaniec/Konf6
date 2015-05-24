@@ -19,4 +19,5 @@
 -- Use only for a proof of concept
 
 -- You can use this file to load seed data into the database using SQL statements
-insert into MemberBasic (id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212')
+insert into MemberBasic (id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212');
+insert into Articles (id, title, description) values (0, 'Artykul 1', 'Opis artykulu 1'), (1, 'Artykul 2', 'Opis numer 2'), (2, 'Art 3', 'Dlugi opis artykulu moze miec 300 znakow');

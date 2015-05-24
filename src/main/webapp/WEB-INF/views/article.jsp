@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista dodanych artykulow</title>
+<title>Informacje o artykule</title>
 </head>
 <body>
-<table>
-<tr><td>Tabela - wgrane artykuly</td><td></td></tr>
-<tr><td>do</td><td>uzupelnienia</td></tr>
+<p>
+Tytul: ${article.title}
+<hr />
+Opis: <br />
+${article.description}
+</p>
 
-</table>
 </body>
 </html>
