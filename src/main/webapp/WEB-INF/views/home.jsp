@@ -11,6 +11,10 @@
     <p>
       Zalogowany jako: <b><c:out value="${pageContext.request.remoteUser}"/></b><br />
       Uprawnienia: <b><sec:authentication property="principal.authorities" /></b>
+      <c:url var="logoutAction" value="/j_spring_security_logout"></c:url>
+      <form action="${logoutAction}" method="post">
+        <input type="submit" value="Logout" />
+      </form>
     </p>
  
     <p>The time on the server is ${serverTime}.</p>
