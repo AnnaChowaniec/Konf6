@@ -60,6 +60,22 @@ public class Member implements Serializable {
     @Digits(fraction = 0, integer = 12, message = "Incorrect Format, valid e.g. 121212121212")
     @Column(name = "phone_number")
     private String phoneNumber;
+    
+    @NotNull
+    @NotEmpty(message = "Password cannot be empty")  
+    private String password;
+    
+    @NotNull
+    @NotEmpty(message = "Function cannot be empty")  
+    private String function;
+    
+    private String university;
+    
+    private String education;
+    
+    private String specialization;
+
+    
 
     public Long getId() {
         return id;
@@ -91,5 +107,46 @@ public class Member implements Serializable {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public String getFunction() {
+        return function;
+    }
+
+    public void setFunction(String function) {
+        this.function = function;
+    }
+    
+    public String getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+      
+    
+    public String getEducation() {
+        return education;
+    }
+
+    public void setEducation(String education) {
+        this.education = education;
+    }
+    
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
 }

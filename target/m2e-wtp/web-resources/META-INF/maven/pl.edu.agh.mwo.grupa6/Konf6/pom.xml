@@ -21,8 +21,8 @@
     <artifactId>Konf6</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>JBoss WFK Quickstart: Konf6</name>
-    <description>Getting Started with Spring 4.0 on JBoss</description>
+    <name>Aplikacja Konf6</name>
+    <description>Aplikacja do obslugi konferencji Konf6</description>
     <url>http://jboss.org/jbossas</url>
 
     <licenses>
@@ -288,6 +288,20 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+        </dependency>
+
         <!-- Other community dependencies -->
         <dependency>
             <groupId>aopalliance</groupId>
@@ -338,6 +352,11 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
+        </dependency>
+        <dependency>
+        	<groupId>mysql</groupId>
+        	<artifactId>mysql-connector-java</artifactId>
+        	<version>5.1.31</version>
         </dependency>
     </dependencies>
 

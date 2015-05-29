@@ -71,4 +71,16 @@ public class MemberDaoImpl implements MemberDao {
         em.persist(member);
         return;
     }
+
+	@Override
+	public void updateMember(Member member) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeMember(Member member) {
+		// TODO Auto-generated method stub
+		
+	}
 }
