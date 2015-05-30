@@ -62,4 +62,9 @@ public class HomeController {
 	public String prelegenci() {
 		return "prelegenci";
 	}
+
+	@RequestMapping(value = "/pomoc")
+	public String pomoc() {
+		return "pomoc";
+	}
 }

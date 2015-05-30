@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -47,6 +50,15 @@
   <div class="row">
       <div class="col-md-2">
       <ul class="nav nav-pills nav-stacked no-active">
+      
+    <c:choose>
+        <c:when test="${not empty pageContext.request.remoteUser}">
+        <li><a href="${pageContext.request.contextPath}/konto" onmouseover="" style="cursor: pointer;">Moje konto</a></li>
+        <li><a href="${pageContext.request.contextPath}/articles" onmouseover="" style="cursor: pointer;">Artykuły</a></li>
+        <li class="divider"></li>
+        </c:when>
+    </c:choose>
+      
         <li><a href="${pageContext.request.contextPath}/" onmouseover="" style="cursor: pointer;">Strona główna</a></li>
         <li><a href="${pageContext.request.contextPath}/konferencja" onmouseover="" style="cursor: pointer;">O konferencji</a></li>
         <li><a href="${pageContext.request.contextPath}/program" onmouseover="" style="cursor: pointer;">Program</a></li>
@@ -54,5 +66,7 @@
         <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#loginModal">Logowanie</a></li>
         <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#signModal">Rejestracja</a></li>
         <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#autorsModal">O autorach</a></li>
+        <li class="divider"></li>
+        <li><a href="${pageContext.request.contextPath}/pomoc" onmouseover="" style="cursor: pointer;">Pomoc</a></li>
       </ul>
       </div>

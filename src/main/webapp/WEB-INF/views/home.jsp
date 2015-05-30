@@ -5,22 +5,6 @@
 
 <%@ include file="header.jsp"%>
 
-    <c:choose>
-        <c:when test="${pageContext.request.remoteUser != null}">
-        <p> 
-            Zalogowany jako: <b><c:out value="${pageContext.request.remoteUser}"/></b><br />
-            Uprawnienia: <b><sec:authentication property="principal.authorities" /></b>
-            <c:url var="logoutAction" value="/j_spring_security_logout"></c:url>
-            <form action="${logoutAction}" method="post">
-                <input type="submit" value="Logout" />
-            </form>
-        </p>
-        </c:when>
-        <c:otherwise>
-            <p>Nie zalogowany - <a href="./login">Zaloguj sie</a></p>
-        </c:otherwise>
-    </c:choose>
-
     <div class="col-md-10">
         <h3>Serdecznie zapraszamy na konferencję</h3>
         <br>

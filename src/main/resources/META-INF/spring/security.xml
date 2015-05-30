@@ -22,6 +22,7 @@ xmlns:security="http://www.springframework.org/schema/security"
     <!-- when using annotations, better not use: access-decision-manager-ref="accessDecisionManager" -->
     <http auto-config="false" use-expressions="true"
         authentication-manager-ref="dao-auth">
+        <intercept-url pattern="/" access="permitAll" />
         <intercept-url pattern="/login" access="permitAll" />
         <intercept-url pattern="/logout" access="permitAll" />
         <intercept-url pattern="/denied" access="permitAll" />
@@ -29,12 +30,12 @@ xmlns:security="http://www.springframework.org/schema/security"
         <form-login login-page="/login" authentication-failure-url="/denied"
             username-parameter="username" password-parameter="password"
             default-target-url="/" />
-        <logout invalidate-session="true" logout-success-url="/logout"
+        <logout invalidate-session="true" logout-success-url="/"
             logout-url="/j_spring_security_logout" />
         <access-denied-handler error-page="/denied"/>
-        <session-management invalid-session-url="/login">
+        <session-management invalid-session-url="/">
             <concurrency-control max-sessions="1"
-                expired-url="/login" />
+                expired-url="/" />
         </session-management>
     </http>
     
