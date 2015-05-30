@@ -56,7 +56,7 @@ public class AppUserDetailsServiceDAO implements UserDetailsService {
             @Override
             public Collection<? extends GrantedAuthority> getAuthorities() {
                 List<SimpleGrantedAuthority> auths = new java.util.ArrayList<SimpleGrantedAuthority>();
-                auths.add(new SimpleGrantedAuthority("Admin"));
+                auths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
                 return auths;
             }
         };
@@ -99,7 +99,7 @@ public class AppUserDetailsServiceDAO implements UserDetailsService {
             @Override
             public Collection<? extends GrantedAuthority> getAuthorities() {
                 List<SimpleGrantedAuthority> auths = new java.util.ArrayList<SimpleGrantedAuthority>();
-                auths.add(new SimpleGrantedAuthority("Author"));
+                auths.add(new SimpleGrantedAuthority("ROLE_AUTHOR"));
                 return auths;
             }
         };
@@ -141,7 +141,7 @@ public class AppUserDetailsServiceDAO implements UserDetailsService {
             @Override
             public Collection<? extends GrantedAuthority> getAuthorities() {
                 List<SimpleGrantedAuthority> auths = new java.util.ArrayList<SimpleGrantedAuthority>();
-                auths.add(new SimpleGrantedAuthority("Reviewer"));
+                auths.add(new SimpleGrantedAuthority("ROLE_REVIEWER"));
                 return auths;
             }
         };
@@ -184,9 +184,9 @@ public class AppUserDetailsServiceDAO implements UserDetailsService {
             @Override
             public Collection<? extends GrantedAuthority> getAuthorities() {
                 List<SimpleGrantedAuthority> auths = new java.util.ArrayList<SimpleGrantedAuthority>();
-                auths.add(new SimpleGrantedAuthority("Author"));
-                auths.add(new SimpleGrantedAuthority("Reviewer"));
-                auths.add(new SimpleGrantedAuthority("Admin"));
+                auths.add(new SimpleGrantedAuthority("ROLE_AUTHOR"));
+                auths.add(new SimpleGrantedAuthority("ROLE_REVIEWER"));
+                auths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
                 return auths;
             }
         };
