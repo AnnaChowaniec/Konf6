@@ -15,7 +15,7 @@
 	<style>
         .jumbotron {    
     color: whitesmoke;
-    background-image: url('technology-662833_1280.jpg');
+    background-image: url('${pageContext.request.contextPath}/resources/gfx/technology-662833_1280.jpg');
     text-shadow: black 0.4em 0.6em 0.2em;
 }
         h1 {

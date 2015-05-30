@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!-- KONIEC sekscji srodkowej - dynamicznej -->
 
 </div>
     <hr>    
 
-<!-- wyskakujace okienko logowania -->   
+<!-- wyskakujace okienko logowania -->
+<c:url var="loginUrl" value="/j_spring_security_check"></c:url>
 <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
   <div class="modal-content">
@@ -15,12 +17,12 @@
           <h1 class="text-center">Logowanie</h1>
       </div>
       <div class="modal-body">
-          <form class="form center-block">
+          <form class="form center-block" action="${loginUrl}" method="POST">
             <div class="form-group">
-              <input class="form-control input-lg" placeholder="E-mail" type="text">
+              <input class="form-control input-lg" placeholder="E-mail" type="text" name="username">
             </div>
             <div class="form-group">
-              <input class="form-control input-lg" placeholder="Hasło" type="password">
+              <input class="form-control input-lg" placeholder="Hasło" type="password" name="password">
             </div>
             <div class="form-group">
               <button class="btn btn-primary btn-lg btn-block">Zaloguj</button>
