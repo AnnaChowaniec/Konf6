@@ -175,7 +175,42 @@
   </div>
   </div>
 </div>
-    
+
+<!-- wyskakujace okienko kontaktu -->
+<div id="contactModal" class="modal fade" tabindex="-1" role="dialog"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">×</button>
+				<h2 class="text-center">Kontakt</h2>
+			</div>
+			<div class="modal-body">
+				<form class="form center-block">
+					<div class="list-group">
+						<a class="list-group-item">
+							<h4 class="list-group-item-heading">Nazwa:</h4>
+							<p class="list-group-item-text">consectetur adipisicing elit,
+								sed do eiusmod...</p>
+						</a> <a class="list-group-item">
+							<h4 class="list-group-item-heading">Adres:</h4>
+							<p class="list-group-item-text">consectetur adipisicing elit,
+								sed do eiusmod...</p>
+						</a> <a class="list-group-item">
+							<h4 class="list-group-item-heading">Telefon:</h4>
+							<p class="list-group-item-text">XXX-XX-XX-XX</p>
+						</a> <a class="list-group-item">
+							<h4 class="list-group-item-heading">E-mail:</h4>
+							<p class="list-group-item-text">xxxxxxxx@xxxx.xx</p>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
 <footer>
 </footer>
     	

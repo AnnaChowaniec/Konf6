@@ -63,8 +63,8 @@ public class HomeController {
 		return "prelegenci";
 	}
 
-	@RequestMapping(value = "/pomoc")
-	public String pomoc() {
-		return "pomoc";
+	@RequestMapping(value = "/test")
+	public String test() {
+		return "test";
 	}
 }

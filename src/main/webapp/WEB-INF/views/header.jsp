@@ -67,6 +67,7 @@
         <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#signModal">Rejestracja</a></li>
         <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#autorsModal">O autorach</a></li>
         <li class="divider"></li>
-        <li><a href="${pageContext.request.contextPath}/pomoc" onmouseover="" style="cursor: pointer;">Pomoc</a></li>
+        <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#contactModal">Kontakt</a></li>
+        <li><a href="${pageContext.request.contextPath}/test" onmouseover="" style="cursor: pointer;">Dla testerów</a></li>
       </ul>
       </div>
