@@ -11,6 +11,7 @@
       <p class="main">
       Testowe pary login/hasło i skojarzone zestawy uprawnień:
       <ul>
+      <li>test/test - zawiera uprawnienia autora, recenzenta i admina</li>
       <li>admin/admin dla uprawnień pełnego administratora (zawiera w sobie autora i recenzenta)</li>
       <li>author/author dla uprawnień autora</li>
       <li>reviewer/reviewer dla uprawnień recenzenta (zawiera tez uprawnienia autora)</li>

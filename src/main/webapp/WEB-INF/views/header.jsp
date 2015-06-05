@@ -51,22 +51,27 @@
       <div class="col-md-2">
       <ul class="nav nav-pills nav-stacked no-active">
       
-    <c:choose>
-        <c:when test="${not empty pageContext.request.remoteUser}">
-        <li><a href="${pageContext.request.contextPath}/konto" onmouseover="" style="cursor: pointer;">Moje konto</a></li>
-        <li><a href="${pageContext.request.contextPath}/articles" onmouseover="" style="cursor: pointer;">Artykuły</a></li>
-        <li class="divider"></li>
-        </c:when>
-    </c:choose>
+        <c:choose>
+            <c:when test="${not empty pageContext.request.remoteUser}">
+                <li><a href="${pageContext.request.contextPath}/konto" onmouseover="" style="cursor: pointer;">Moje konto</a></li>
+            </c:when>
+        </c:choose>
       
         <li><a href="${pageContext.request.contextPath}/" onmouseover="" style="cursor: pointer;">Strona główna</a></li>
         <li><a href="${pageContext.request.contextPath}/konferencja" onmouseover="" style="cursor: pointer;">O konferencji</a></li>
         <li><a href="${pageContext.request.contextPath}/program" onmouseover="" style="cursor: pointer;">Program</a></li>
         <li><a href="${pageContext.request.contextPath}/prelegenci" onmouseover="" style="cursor: pointer;">Prelegenci</a></li>
-        <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#loginModal">Logowanie</a></li>
-        <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#signModal">Rejestracja</a></li>
-        <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#autorsModal">O autorach</a></li>
+        <c:choose>
+            <c:when test="${not empty pageContext.request.remoteUser}">
+                <li><a href="${pageContext.request.contextPath}/j_spring_security_logout" onmouseover="" style="cursor: pointer;">Wyloguj się</a></li>
+            </c:when>
+            <c:otherwise>
+                <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#loginModal">Logowanie</a></li>
+                <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#signModal">Rejestracja</a></li>
+            </c:otherwise>
+        </c:choose>
         <li class="divider"></li>
+        <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#autorsModal">O autorach</a></li>
         <li><a onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#contactModal">Kontakt</a></li>
         <li><a href="${pageContext.request.contextPath}/test" onmouseover="" style="cursor: pointer;">Dla testerów</a></li>
       </ul>

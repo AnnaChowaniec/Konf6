@@ -29,7 +29,7 @@ xmlns:security="http://www.springframework.org/schema/security"
         <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
         <form-login login-page="/login" authentication-failure-url="/denied"
             username-parameter="username" password-parameter="password"
-            default-target-url="/" />
+            default-target-url="/konto" />
         <logout invalidate-session="true" logout-success-url="/"
             logout-url="/j_spring_security_logout" />
         <access-denied-handler error-page="/denied"/>

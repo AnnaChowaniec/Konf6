@@ -30,7 +30,7 @@
 	<!-- Zakladka: WITAJ - START -->
 	<div class="tab-content">
 		<div class="tab-pane active" id="witaj">
-			<h3 class="text-left">Witaj!</h3>
+			<h3 class="text-left">Witaj <c:out value="${pageContext.request.remoteUser}" />!</h3>
 			<br>
 
 			<p class="main">Lorem ipsum dolor sit amet, consectetur
@@ -57,7 +57,11 @@
 
 
 			<div class="col-md-1 col-md-offset-10">
-				<button type="button" class="btn btn-info">Wyloguj się</button>
+				<form
+					action="${pageContext.request.contextPath}/j_spring_security_logout"
+					method="post">
+					<input type="submit" class="btn btn-info" value="Wyloguj się" />
+				</form>
 			</div>
 
 		</div>

@@ -15,7 +15,7 @@ public class AccountController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(AccountController.class);
 
-	@Secured("ROLE_ADMIN")
+	@Secured({"ROLE_ADMIN", "ROLE_REVIEWER", "ROLE_AUTHOR"})
 	@RequestMapping(value = "/konto", method = RequestMethod.GET)
 	public String account(Model model) {
 		return "account";
